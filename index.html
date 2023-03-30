@@ -1,0 +1,342 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+    integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Plus Jakarta Sans' rel='stylesheet'>
+</head>
+<style>
+  body {
+    overflow: scroll;
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans';
+
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .navbar {
+    height: 12vh;
+    width: 100%;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.11);
+    display: flex;
+    background-color: #FFFFFF;
+    align-items: center;
+    flex-direction: row;
+    padding: 0 90px;
+    justify-content: space-between;
+  }
+
+  .brand {
+    width: 90px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .brand h3 {
+    color: black;
+  }
+
+  .brand span {
+    color: purple;
+    text-decoration: line-through;
+  }
+
+  .tabs {
+    background-color: #FFFFFF;
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  .tabs button {
+    height: 40px;
+    border-radius: 10px;
+    border: 0px;
+    width: 90px;
+    font-size: 16px;
+    background-color: #FFFFFF;
+    color: #042e38f1;
+  }
+
+  #buy {
+    background-color: #8c0ba3;
+    color: #FFFFFF;
+  }
+
+  .homesec {
+    margin-top: 12vh;
+    background-image: url('via.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 88vh;
+    display: flex;
+  }
+
+  .homesec .card {
+    width: 450px;
+    height: 320px;
+    border: 0px;
+    margin-left: 115px;
+    margin-top: 175px;
+    background-color: transparent;
+  }
+
+  .homesec .card-top {
+    width: 450px;
+    height: 150px;
+  }
+
+  .homesec .card-top h2 {
+    font-size: 60px;
+    color: #FFFFFF;
+  }
+
+  .homesec .card-body {
+    width: 450px;
+    height: 70px;
+    padding: 0;
+  }
+
+  .homesec .card-body p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #494b4b;
+  }
+
+  .homesec .card-footer {
+    width: 450px;
+    height: 100px;
+    padding: 0px;
+    border: 0px;
+    background-color: transparent;
+  }
+
+  .homesec .card-footer button {
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 0px;
+    width: 140px;
+    font-size: 16px;
+    background-color: #FFFFFF;
+    color: purple;
+  }
+
+  .aboutsec {
+    width: 100%;
+    height: 98vh;
+    display: flex;
+    background-image: url('vib.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 150px;
+  }
+
+  .aboutsec h3 {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 30px;
+    color: #FFFFFF;
+  }
+
+  .aboutsec h4 {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 40px;
+    color: purple;
+  }
+
+  .aboutsec p {
+    color: #FFFFFF;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .contactsec {
+    width: 100%;
+    height: 98vh;
+    display: flex;
+    align-items: center;
+    padding: 0px 155px;
+    background-color: #f3f0f0;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .contactsec form {
+    width: 800px;
+    padding: 0 30px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    background-color: transparent;
+  }
+
+  .contactsec form label {
+    color: black;
+  }
+
+  .contactsec .inputcon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 10vh;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .inputcon input {
+    border-radius: 5px;
+    width: 100%;
+    height: 35px;
+    border: 1px solid rgba(0, 0, 0, 0.281);
+
+  }
+
+  .inputcon input:focus {
+    outline: none;
+  }
+
+  .contactsec .textcon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40vh;
+    width: 100%;
+  }
+
+  .textcon textarea {
+    border-radius: 5px;
+    width: 100%;
+    height: 240px;
+    border: 1px solid rgba(0, 0, 0, 0.281);
+  }
+
+  .textcon textarea:focus {
+    outline: none;
+  }
+
+  #submit {
+    width: 110px;
+    height: 6vh;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.281);
+    margin-top: 20px;
+    background-color: #FFFFFF;
+    color: purple;
+
+  }
+
+  #submit:hover {
+    background-color: purple;
+    color: white;
+  }
+</style>
+
+<body>
+  <div class="content bg-light">
+    <div class="navbar fixed-top ">
+      <div class="brand">
+        <h3 class="fw-bolder">L<span>W</span></h3>
+      </div>
+      <div class="tabs">
+        <a href="#home"><button class="fw-bolder">Home</button></a>
+        <a href="#about"><button class="fw-bolder">About</button></a>
+        <a href="#contact"><button class="fw-bolder">Contact</button></a>
+        <a href="login.html"><button class=" fw-bold" id="buy">Buy Now</button></a>
+      </div>
+    </div>
+    <div class="homesec" id="home">
+      <div class="card">
+        <div class="card-top">
+          <h2 class="fw-bolder">Lw reality is now going virtual</h2>
+        </div>
+        <div class="card-body">
+          <p class="fw-bold">Best in class virtual reality gear to make your everyday experience great. Go check it.</p>
+        </div>
+        <div class="card-footer">
+          <a href="login.html"><button class="fw-bolder" id="buyy">Buy Now</button></a>
+        </div>
+      </div>
+    </div>
+    <div class="aboutsec " id="about">
+      <h3 class="fw-bolder">Welcome to our Virtual Reality landing page! Here, you'll find everything you need to know
+        about the exciting world of virtual reality and how it can revolutionize your life.</h3>
+      <h4 class="fw-bolder">LW REALITY NOW!</h4>
+      <p>Virtual reality is no longer just a concept from science fiction movies. It's now a reality that you can
+        experience right from the comfort of your own home. Imagine stepping into a world where you can explore exotic
+        locations, play immersive games, and even attend virtual concerts.
+
+        At our Virtual Reality landing page, we'll guide you through everything you need to know to get started with
+        virtual
+        reality. Whether you're a beginner or an experienced user, we'll help you find the perfect VR headset and
+        accessories to suit your needs.
+
+        We offer a wide range of VR products, including headsets from top brands like Oculus, HTC, and Sony. You can
+        browse
+        our selection and find the perfect fit for your budget and preferences. We also have a range of accessories,
+        such as
+        controllers and sensors, to enhance your VR experience.
+
+        Our landing page also provides helpful guides and tutorials to help you get the most out of your VR headset.
+        From
+        setting up your device to troubleshooting common issues, we've got you covered. You'll also find tips and tricks
+        for
+        using your headset to its fullest potential.
+
+        Virtual reality has endless possibilities, and we're excited to help you discover them. Whether you're looking
+        to
+        play the latest VR games or explore new worlds, we're here to help you make the most of your virtual reality
+        experience. So why wait? Dive into our landing page and discover the future of entertainment today!</p>
+    </div>
+    <div class="contactsec" id="contact">
+      <form action="">
+        <div class="inputcon">
+          <label class="fw-bolder
+     " for="">Email</label>
+          <input type="email" name="" id="">
+        </div>
+        <div class="inputcon">
+          <label class="fw-bolder
+     " for="">Phone Number</label>
+          <input type="tel" name="" id="">
+        </div>
+        <div class="textcon">
+          <label class="fw-bolder
+     " for="">Reason for Contact</label>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+        <input class="fw-bolder" type="submit" value="Submit" id="submit">
+      </form>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

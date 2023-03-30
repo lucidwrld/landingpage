@@ -1,0 +1,192 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <style>
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    .bb {
+      background-image: url("vib.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    input {
+      height: 55px;
+      margin-bottom: 40px;
+      border-radius: 10px;
+      border: 1px solid rgb(172, 160, 160);
+      ;
+    }
+
+    a {
+      text-decoration: none;
+      color: purple;
+    }
+
+    a:hover {
+      color: purple;
+    }
+
+    #login {
+      color: purple;
+      background-color: whitesmoke;
+      border: 1px solid purple;
+    }
+
+    #login:hover {
+      background-color: purple;
+      color: white;
+      font-weight: bolder;
+
+    }
+
+    #togglePassword {
+      position: absolute;
+      margin-top: 110px;
+      margin-left: 350px;
+      font-size: 13px;
+      color: purple;
+      font-weight: bolder;
+      cursor: pointer;
+    }
+
+    #applynow {
+      color: white;
+      background-color: #BFC4BF;
+    }
+
+    #email:focus,
+    #password:focus {
+      outline: none;
+      border: 2px solid purple;
+    }
+
+    .image {
+      position: fixed;
+      margin-bottom: 750px;
+      margin-right: 1370px;
+      z-index: 10;
+      cursor: pointer;
+    }
+
+    .whatsap {
+      width: 80px;
+      height: 80px;
+      position: fixed;
+      margin-left: 94%;
+      margin-top: 500px;
+    }
+
+    @media (max-width:1380px) and (min-width:1000px) {
+      .image {
+        position: fixed;
+        margin-bottom: 640px;
+        margin-right: 1170px;
+        z-index: 10;
+        cursor: pointer;
+      }
+
+      .whatsap {
+        width: 80px;
+        height: 80px;
+        position: fixed;
+        margin-left: 94%;
+        margin-top: 300px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid bb d-flex"
+    style="width: 100%; height: 100%; justify-content: center; align-items: center; ; background-repeat: no-repeat; background-size: cover;">
+
+    <div class=" card container-fluid bg-light rounded-5 " style="width: 600px; height: 650px; margin-top: 20px;  ">
+      <div class="card-top " style="margin-top: 35px;">
+        <a href="login.html" style="margin-left: 500px; border: 0px; background-color: transparent;">
+          <h8 class=" fw-semibold " style=" color: purple;">BACK</h8>
+        </a>
+
+      </div>
+      <div class="card-body container-fluid d-flex flex-column align-items-center justify-content-center"
+        style="width: 100%;">
+        <div class="container-fluid" style="width: 80%; border-bottom: 1px solid rgb(172, 160, 160);">
+          <h2>Apply to join the internship</h2>
+          <p>Enter your email to begin your application</p>
+          <form action="index.html" onsubmit="return valid()" class="d-flex flex-column">
+            <input type="email" name="email" id="email" placeholder="Email address" required="Email is required"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" onkeyup="check()">
+            <input type="email" name="reemail" id="reemail" placeholder="Re-enter email address"
+              required="Email is required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" onkeyup="check()">
+
+            <input class="fw-bolder" type="submit" value="Apply now" id="applynow">
+            <div class="container-fluid d-flex align-items-center justify-content-center"><span
+                style="font-size: 11px; text-align: center;">By
+                applying for the
+                internship. I agree to <span style="color: purple;">Side Hustle's Terms and Conditions</span> and <span
+                  style="color: purple;">Privacy Policy</span></span></div>
+
+          </form>
+        </div>
+        <p style="margin-top: 10px;">Already have an account?</p>
+        <input type="submit" id="login" value="Login" style="width: 75%;" onclick="window.location.href='login.html'">
+
+      </div>
+    </div>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+  <script>
+    let em = true;
+    let me = true;
+    let applynow = document.getElementById('applynow')
+
+    function check() {
+      if (((em == true) || (me == true)) && (document.getElementById('email').value.length > 0) && (document.getElementById('reemail').value.length > 5)) {
+
+        if ((document.getElementById('email').value === document.getElementById('reemail').value)) {
+          applynow.style.backgroundColor = " purple";
+          applynow.style.color = "white"
+
+        } else {
+          applynow.style.backgroundColor = "  #BFC4BF";
+          applynow.style.color = "white"
+
+        }
+      } else {
+        applynow.style.backgroundColor = "  #BFC4BF";
+        applynow.style.color = "white"
+
+      }
+    }
+
+    let email = document.getElementById("email");
+
+    let reemail = document.getElementById("reemail")
+    function valid() {
+      if (email !== "" && reemail !== "") {
+        if (email.value == reemail.value) {
+          alert("Successful!!!!!!!!!")
+          return true
+        } else {
+          alert("Emails don't match")
+          return false;
+        }
+
+
+      } else {
+        return false
+      }
+    }
+  </script>
+</body>
+
+</html>
