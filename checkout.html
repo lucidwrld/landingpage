@@ -1,0 +1,640 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+    integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Plus Jakarta Sans' rel='stylesheet'>
+</head>
+<style>
+  body {
+    overflow: scroll;
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans';
+
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .content {
+    width: 100%;
+    height: 100vh;
+    background-image: url("card.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .checkout {
+    height: 500px;
+    width: 700px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.144);
+    border: 2px solid rgba(0, 0, 0, 0.267);
+  }
+
+  .checkout .card-top {
+    width: 100%;
+    height: 70px;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: purple;
+  }
+
+  .checkout .card-top h3 {
+    color: #FFFFFF;
+    font-size: 36px;
+  }
+
+
+  .checkout .card-body {
+    width: 100%;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .checkout .card-body form {
+    padding: 0;
+    width: 100%;
+  }
+
+  .inputdiv {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    margin-bottom: 25px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+  }
+
+  .inputdiv1 {
+    width: 330px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .inputdiv1 label {
+    font-size: 18px;
+    color: purple;
+  }
+
+  .inputdiv1 input {
+    width: 330px;
+    height: 35px;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.363);
+  }
+
+  .inputdiv1 input:focus {
+    outline: none;
+  }
+
+  .inputdiv1 select {
+    width: 330px;
+    height: 35px;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.363);
+  }
+
+  .inputdiv1 select:focus {
+    outline: none;
+  }
+
+  .inputdiv2 {
+    width: 330px;
+    height: 100%;
+  }
+
+  .inputdiv2 label {
+    font-size: 18px;
+    color: purple;
+  }
+
+  .inputdiv2 input {
+    width: 330px;
+    height: 35px;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.363);
+  }
+
+  .inputdiv2 input:focus {
+    outline: none;
+  }
+
+  .inputdiv2 select {
+    width: 330px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid black;
+  }
+
+  .inputdiv2 select:focus {
+    outline: none;
+  }
+
+  .checkout .card-footer {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    border: 0px;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+  }
+
+  .checkout .card-footer button {
+    width: 110px;
+    margin-top: 10px;
+    height: 6vh;
+    border-radius: 8px;
+    border: 2px solid rgba(0, 0, 0, 0.281);
+    background-color: #FFFFFF;
+    color: purple;
+  }
+
+  .checkout .card-footer button:hover {
+    background-color: purple;
+    color: white;
+  }
+
+  @media (max-width:1000px) and (min-width:200px) {
+    .content {
+      height: 100%;
+      width: 100%;
+      background-image: url("card.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+  }
+
+  @media (max-width:1000px) and (min-width:700px) {
+    .checkout .card-footer button {
+      width: 110px;
+      margin-top: 5px;
+      height: 4vh;
+    }
+
+  }
+
+  @media (max-width:699px) and (min-width:500px) {
+
+    .checkout {
+      height: 500px;
+      width: 480px;
+    }
+
+    .checkout .card-top {
+      width: 100%;
+      height: 70px;
+    }
+
+    .checkout .card-top h3 {
+      font-size: 36px;
+    }
+
+
+    .checkout .card-body {
+      width: 100%;
+      height: 360px;
+    }
+
+
+    .inputdiv {
+      width: 100%;
+      height: 10vh;
+      margin-bottom: 25px;
+    }
+
+    .inputdiv1 {
+      width: 210px;
+      height: 100%;
+    }
+
+    .inputdiv1 label {
+      font-size: 18px;
+
+    }
+
+    .inputdiv1 input {
+      width: 210px;
+      height: 35px;
+    }
+
+    .inputdiv1 select {
+      width: 210px;
+      height: 35px;
+    }
+
+    .inputdiv2 {
+      width: 210px;
+      height: 100%;
+    }
+
+    .inputdiv2 label {
+      font-size: 18px;
+    }
+
+    .inputdiv2 input {
+      width: 210px;
+      height: 35px;
+    }
+
+    .inputdiv2 select {
+      width: 210px;
+      height: 35px;
+    }
+
+
+
+    .checkout .card-footer {
+      width: 100%;
+      height: 70px;
+    }
+
+    .checkout .card-footer button {
+      width: 110px;
+      margin-top: 10px;
+      height: 6vh;
+      border-radius: 8px;
+    }
+
+
+
+  }
+
+
+  @media (max-width:499px) and (min-width:400px) {
+
+    .checkout {
+      height: 500px;
+      width: 380px;
+    }
+
+    .checkout .card-top {
+      width: 100%;
+      height: 70px;
+    }
+
+    .checkout .card-top h3 {
+      font-size: 36px;
+    }
+
+
+    .checkout .card-body {
+      width: 100%;
+      height: 360px;
+    }
+
+
+    .inputdiv {
+      width: 100%;
+      height: 10vh;
+      margin-bottom: 25px;
+    }
+
+    .inputdiv1 {
+      width: 170px;
+      height: 100%;
+    }
+
+    .inputdiv1 label {
+      font-size: 15px;
+
+    }
+
+    .inputdiv1 input {
+      width: 170px;
+      height: 35px;
+    }
+
+    .inputdiv1 select {
+      width: 170px;
+      height: 35px;
+    }
+
+    .inputdiv2 {
+      width: 170px;
+      height: 100%;
+    }
+
+    .inputdiv2 label {
+      font-size: 15px;
+    }
+
+    .inputdiv2 input {
+      width: 170px;
+      height: 35px;
+    }
+
+    .inputdiv2 select {
+      width: 170px;
+      height: 35px;
+    }
+
+    .checkout .card-footer {
+      width: 100%;
+      height: 70px;
+    }
+
+    .checkout .card-footer button {
+      width: 110px;
+      margin-top: 10px;
+      height: 5vh;
+      border-radius: 8px;
+    }
+
+  }
+
+
+  @media (max-width:399px) and (min-width:350px) {
+
+    .checkout {
+      height: 440px;
+      width: 330px;
+    }
+
+    .checkout .card-top {
+      width: 100%;
+      height: 70px;
+    }
+
+    .checkout .card-top h3 {
+      font-size: 36px;
+    }
+
+
+    .checkout .card-body {
+      width: 100%;
+      height: 300px;
+    }
+
+
+    .inputdiv {
+      width: 100%;
+      height: 7vh;
+      margin-bottom: 20px;
+    }
+
+    .inputdiv1 {
+      width: 140px;
+      height: 100%;
+    }
+
+    .inputdiv1 label {
+      font-size: 12px;
+
+    }
+
+    .inputdiv1 input {
+      width: 140px;
+      height: 30px;
+      font-size: 12px;
+    }
+
+    .inputdiv1 select {
+      width: 140px;
+      height: 30px;
+
+      font-size: 12px;
+    }
+
+    .inputdiv2 {
+      width: 140px;
+      height: 100%;
+    }
+
+    .inputdiv2 label {
+      font-size: 12px;
+    }
+
+    .inputdiv2 input {
+      width: 140px;
+      font-size: 12px;
+      height: 30px;
+    }
+
+    .inputdiv2 select {
+      width: 140px;
+      font-size: 12px;
+      height: 30px;
+    }
+
+    .checkout .card-footer {
+      width: 100%;
+      height: 70px;
+    }
+
+    .checkout .card-footer button {
+      width: 110px;
+      margin-top: 10px;
+      height: 5vh;
+      border-radius: 8px;
+    }
+
+  }
+
+  @media (max-width:349px) and (min-width:280px) {
+
+    .checkout {
+      height: 340px;
+      width: 260px;
+    }
+
+    .checkout .card-top {
+      width: 100%;
+      height: 70px;
+    }
+
+    .checkout .card-top h3 {
+      font-size: 27px;
+    }
+
+
+    .checkout .card-body {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+    }
+
+
+    .inputdiv {
+      width: 100%;
+      height: 5.4vh;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .inputdiv1 {
+      width: 125px;
+      height: 100%;
+    }
+
+    .inputdiv1 label {
+      font-size: 10px;
+
+    }
+
+    .inputdiv1 input {
+      width: 125px;
+      height: 20px;
+      font-size: 10px;
+    }
+
+    .inputdiv1 select {
+      width: 125px;
+      height: 20px;
+
+      font-size: 10px;
+    }
+
+    .inputdiv2 {
+      width: 125px;
+      height: 100%;
+    }
+
+    .inputdiv2 label {
+      font-size: 10px;
+    }
+
+    .inputdiv2 input {
+      width: 125px;
+      font-size: 10px;
+      height: 20px;
+    }
+
+    .inputdiv2 select {
+      width: 125px;
+      font-size: 10px;
+      height: 20px;
+    }
+
+    .checkout .card-footer {
+      width: 100%;
+      height: 70px;
+    }
+
+    .checkout .card-footer button {
+      width: 100px;
+      margin-top: 10px;
+      height: 5vh;
+      border-radius: 8px;
+    }
+
+  }
+</style>
+
+<body>
+  <div class="content bg-light d-flex justify-content-center align-items-center">
+
+    <form action="" onsubmit="return valid()">
+      <div class="card checkout">
+        <div class="card-top">
+          <h3 class="fw-bolder">Checkout</h3>
+        </div>
+        <div class="card-body">
+          <div class="inputdiv">
+            <div class="inputdiv1">
+              <label class="fw-bolder" for="">Name</label>
+              <input type="text" name="" id="name" placeholder="MR money money" required pattern=".{2,26}">
+            </div>
+
+            <div class="inputdiv2">
+              <label class="fw-bolder" for="">Email</label>
+              <input type="email" name="email" id="email" placeholder="Email address" required="Email is required"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+            </div>
+          </div>
+          <div class="inputdiv">
+            <div class="inputdiv1">
+              <label class="fw-bolder" for="">Phone Number</label>
+              <input type="tel" name="" id="number" placeholder="09041941949" required pattern=".{11,11}">
+            </div>
+
+            <div class="inputdiv2">
+              <label class="fw-bolder" for="">Address</label>
+              <input type="text" name="" id="address" required placeholder="2 Nigeria off okada road, lagos, US"
+                pattern=".{10,30}">
+            </div>
+          </div>
+          <div class="inputdiv">
+            <div class="inputdiv1">
+              <label class="fw-bolder" for="">Card Type</label>
+              <select name="" id="cardtype" required>
+                <option value="mast">MasterCard</option>
+                <option value="mast">Verve</option>
+                <option value="mast">Visa Card</option>
+                <option value="mast">Platinum</option>
+              </select>
+            </div>
+
+            <div class="inputdiv2">
+              <label class="fw-bolder" for="">Card Number</label>
+              <input type="tel" name="" id="cardnum" placeholder=" 0237589306152746" required pattern=".{16,16}">
+            </div>
+          </div>
+          <div class="inputdiv">
+            <div class="inputdiv1">
+              <label class="fw-bolder" for="">Expiry Date</label>
+              <input type="month" name="" id="exp" min="2023-01" required max="2026-12">
+            </div>
+
+            <div class="inputdiv2">
+              <label class="fw-bolder" for="">CV</label>
+              <input type="tel" name="" id="cv" placeholder="000" required pattern=".{3,3}">
+            </div>
+          </div>
+
+
+        </div>
+        <div class="card-footer"><a href=""><button type="submit" class="btn fw-bolder">Pay</button></a></div>
+      </div>
+    </form>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"></script>
+  <script>
+
+    let name = document.getElementById("name");
+    let email = document.getElementById("email");
+    let number = document.getElementById("number");
+    let address = document.getElementById("address");
+    let cardtype = document.getElementById("cardtype");
+    let cardnum = document.getElementById("cardnum");
+    let exp = document.getElementById("exp");
+    let cv = document.getElementById("cv");
+    function valid() {
+      if (name !== "" && email !== "" && number !== "" && address !== "" && cardtype !== "" && cardnum !== "" && exp !== "" && cv !== "") {
+        alert("Order Successful!!!!!!!!!")
+
+        return true
+      } else {
+        return false
+      }
+    }
+  </script>
+</body>
+
+</html>

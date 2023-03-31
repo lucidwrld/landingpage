@@ -12,6 +12,8 @@
       background-image: url("via.jpg");
       background-repeat: no-repeat;
       background-size: cover;
+      width: 100%;
+      height: 890px;
     }
 
     ::-webkit-scrollbar {
@@ -36,8 +38,33 @@
       color: purple;
     }
 
+    .card {
+      width: 600px;
+      height: 700px;
+      margin-top: 10px;
+      box-shadow: 0px 0px 20px 0px #bfc4bf9d;
+      margin-bottom: 300px;
+      margin-top: 300px;
+    }
+
+    .card-top {
+      margin-top: 35px;
+    }
+
+
+    .card-top button {
+      margin-left: 500px;
+      border: 0px;
+      background-color: transparent;
+    }
+
     a:hover {
       color: purple;
+    }
+
+    .body {
+      width: 80%;
+      border-bottom: 1px solid rgb(172, 160, 160);
     }
 
     #signup {
@@ -82,29 +109,197 @@
       cursor: pointer;
     }
 
-    .whatsap {
-      width: 80px;
-      height: 80px;
-      position: fixed;
-      margin-left: 94%;
-      margin-top: 500px;
+
+
+    @media (max-width:1000px) and (min-width:200px) {
+      .bb {
+        height: 100%;
+      }
     }
 
-    @media (max-width:1380px) and (min-width:1000px) {
-      .image {
-        position: fixed;
-        margin-bottom: 820px;
-        margin-right: 1170px;
-        z-index: 10;
+    @media (max-width:600px) and (min-width:500px) {
+      .bb {
+        height: 100%;
+      }
+
+      .card {
+        width: 500px;
+        height: 600px;
+      }
+
+      .card-top button {
+        margin-left: 400px;
+        border: 0px;
+        background-color: transparent;
+      }
+
+      #togglePassword {
+        position: absolute;
+        margin-top: 115px;
+        margin-left: 280px;
+        font-size: 13px;
+        color: purple;
+        font-weight: bolder;
+        cursor: pointer;
+      }
+    }
+
+    @media (max-width:499px) and (min-width:400px) {
+      .bb {
+        height: 100%;
+      }
+
+      .card {
+        width: 350px;
+        height: 400px;
+      }
+
+      .card-top {
+        margin-top: 15px;
+      }
+
+
+      .card-top button {
+        margin-left: 270px;
+        border: 0px;
+        background-color: transparent;
+      }
+
+      .card-body p {
+        font-size: 10px;
+      }
+
+      input {
+        height: 30px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        font-size: 13px;
+        border: 1px solid rgb(172, 160, 160);
+        ;
+      }
+
+      #togglePassword {
+        position: absolute;
+        margin-top: 54px;
+        margin-left: 180px;
+        font-size: 8px;
+        color: purple;
+        font-weight: bolder;
         cursor: pointer;
       }
 
-      .whatsap {
-        width: 80px;
-        height: 80px;
-        position: fixed;
-        margin-left: 94%;
-        margin-top: 300px;
+      .fp span {
+        font-size: 13px;
+      }
+    }
+
+
+    @media (max-width:399px) and (min-width:350px) {
+      .bb {
+        height: 100%;
+      }
+
+      .card {
+        width: 330px;
+        height: 400px;
+      }
+
+      .card-top {
+        margin-top: 15px;
+      }
+
+
+      .card-top button {
+        margin-left: 250px;
+        border: 0px;
+        font-size: 14px;
+        background-color: transparent;
+      }
+
+      .card-body p {
+        font-size: 9px;
+      }
+
+      input {
+        height: 30px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        font-size: 13px;
+        border: 1px solid rgb(172, 160, 160);
+        ;
+      }
+
+      #togglePassword {
+        position: absolute;
+        margin-top: 54px;
+        margin-left: 165px;
+        font-size: 8px;
+        color: purple;
+        font-weight: bolder;
+        cursor: pointer;
+      }
+
+      .fp span {
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width:349px) and (min-width:280px) {
+      .bb {
+        height: 100%;
+      }
+
+      .card {
+        width: 270px;
+        height: 400px;
+      }
+
+      .card-top {
+        margin-top: 15px;
+      }
+
+
+      .card-top button {
+        margin-left: 180px;
+        border: 0px;
+        font-size: 14px;
+        background-color: transparent;
+      }
+
+      .body {
+        width: 95%;
+        border-bottom: 1px solid rgb(172, 160, 160);
+      }
+
+      .card-body {
+        padding: 0px;
+      }
+
+      .card-body p {
+        font-size: 9px;
+      }
+
+      input {
+        height: 30px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        font-size: 13px;
+        border: 1px solid rgb(172, 160, 160);
+        ;
+      }
+
+      #togglePassword {
+        position: absolute;
+        margin-top: 54px;
+        margin-left: 165px;
+        font-size: 8px;
+        color: purple;
+        font-weight: bolder;
+        cursor: pointer;
+      }
+
+      .fp span {
+        font-size: 12px;
       }
     }
   </style>
@@ -112,29 +307,27 @@
 
 <body>
   <div class="container-fluid bb d-flex"
-    style="width: 100%; height: 890px; justify-content: center; align-items: center; ; background-repeat: no-repeat; background-size: cover;">
-    <div class=" card container-fluid bg-light rounded-5 "
-      style="width: 600px; height: 700px; margin-top: 10px; box-shadow: 0px 0px 20px 0px #bfc4bf9d; margin-bottom: 300px; margin-top: 300px;">
-      <div class="card-top " style="margin-top: 35px;">
-        <button style="margin-left: 500px; border: 0px; background-color: transparent;"
-          onclick="window.location.href='index.html'">
+    style=" justify-content: center; align-items: center; ; background-repeat: no-repeat; background-size: cover;">
+    <div class=" card container-fluid bg-light rounded-5 ">
+      <div class="card-top ">
+        <button onclick="window.location.href='index.html'">
           <h8 class=" fw-semibold " style=" color: purple;">BACK</h8>
         </button>
 
       </div>
       <div class="card-body container-fluid d-flex flex-column align-items-center justify-content-center"
         style="width: 100%;">
-        <div class="container-fluid" style="width: 80%; border-bottom: 1px solid rgb(172, 160, 160);">
+        <div class="container-fluid body">
           <h2>Sign in</h2>
-          <p>Enter your details to continue your learning path</p>
-          <form action="index.html" class="d-flex flex-column" onsubmit="return valid()">
+          <p>Enter your details to continue your purchase</p>
+          <form action="checkout.html" class="d-flex flex-column" onsubmit="return valid()">
             <input type="email" name="email" id="email" placeholder="Email address" required="Email is required"
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" onkeyup="check()">
             <input type="password" name="password" id="password" placeholder="Password" required="Password is required"
               pattern=".{8,16}" onkeyup="check()">
             <p id="togglePassword">SHOW</p>
             <input class="fw-bolder" type="submit" value="Sign In" id="signin">
-            <div class="container-fluid d-flex align-items-center justify-content-center"><span>Forgot Password? <a
+            <div class="container-fluid fp d-flex align-items-center justify-content-center"><span>Forgot Password? <a
                   href="reset.html">Recover here</a></span></div>
 
           </form>

@@ -16,6 +16,10 @@
       background-image: url("vib.jpg");
       background-repeat: no-repeat;
       background-size: cover;
+      width: 100%;
+      height: 890px;
+      justify-content: center;
+      align-items: center;
     }
 
     input {
@@ -35,6 +39,37 @@
       color: purple;
     }
 
+    .card {
+      width: 600px;
+      height: 650px;
+      margin-top: 20px;
+
+    }
+
+    .card-top {
+      margin-top: 35px;
+    }
+
+    .card-top a {
+      margin-left: 500px;
+      border: 0px;
+      background-color: transparent;
+    }
+
+    .card-body {
+      width: 100%;
+    }
+
+    .fp {
+      width: 80%;
+      border-bottom: 1px solid rgb(172, 160, 160);
+    }
+
+    .body {
+      font-size: 11px;
+      text-align: center;
+    }
+
     #login {
       color: purple;
       background-color: whitesmoke;
@@ -48,15 +83,7 @@
 
     }
 
-    #togglePassword {
-      position: absolute;
-      margin-top: 110px;
-      margin-left: 350px;
-      font-size: 13px;
-      color: purple;
-      font-weight: bolder;
-      cursor: pointer;
-    }
+
 
     #applynow {
       color: white;
@@ -64,74 +91,215 @@
     }
 
     #email:focus,
-    #password:focus {
+    #reemail:focus {
       outline: none;
       border: 2px solid purple;
     }
 
-    .image {
-      position: fixed;
-      margin-bottom: 750px;
-      margin-right: 1370px;
-      z-index: 10;
-      cursor: pointer;
+
+    @media (max-width:1000px) and (min-width:200px) {
+      .bb {
+        height: 100%;
+      }
     }
 
-    .whatsap {
-      width: 80px;
-      height: 80px;
-      position: fixed;
-      margin-left: 94%;
-      margin-top: 500px;
+    @media (max-width:600px) and (min-width:500px) {
+      .bb {
+        height: 100%;
+      }
+
+      .card {
+        width: 480px;
+        height: 600px;
+      }
+
+      .card-top a {
+        margin-left: 390px;
+        border: 0px;
+        background-color: transparent;
+      }
+
+      input {
+        margin-bottom: 20px;
+      }
     }
 
-    @media (max-width:1380px) and (min-width:1000px) {
-      .image {
-        position: fixed;
-        margin-bottom: 640px;
-        margin-right: 1170px;
-        z-index: 10;
+    @media (max-width:499px) and (min-width:400px) {
+      .bb {
+        height: 100%;
+      }
+
+      .card {
+        width: 350px;
+        height: 400px;
+      }
+
+      .card-top {
+        margin-top: 10px;
+      }
+
+
+      .card-top a {
+        margin-left: 270px;
+        border: 0px;
+        background-color: transparent;
+      }
+
+      .card-body p {
+        font-size: 10px;
+      }
+
+      input {
+        height: 35px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        font-size: 13px;
+        border: 1px solid rgb(172, 160, 160);
+        ;
+      }
+
+      .body span {
+        font-size: 8px;
+      }
+    }
+
+
+    @media (max-width:399px) and (min-width:350px) {
+      .bb {
+        height: 100%;
+      }
+
+      .card {
+        width: 330px;
+        height: 400px;
+      }
+
+      .card-top {
+        margin-top: 15px;
+      }
+
+
+      .card-top a {
+        margin-left: 250px;
+        border: 0px;
+        font-size: 14px;
+        background-color: transparent;
+      }
+
+      .card-body p {
+        font-size: 9px;
+      }
+
+      input {
+        height: 35px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        font-size: 13px;
+        border: 1px solid rgb(172, 160, 160);
+        ;
+      }
+
+
+      .body span {
+        font-size: 8px;
+      }
+    }
+
+    @media (max-width:349px) and (min-width:280px) {
+      .bb {
+        height: 100%;
+      }
+
+      .card {
+        width: 270px;
+        height: 400px;
+      }
+
+      .card-top {
+        margin-top: 15px;
+      }
+
+
+      .card-top a {
+        margin-left: 180px;
+        border: 0px;
+        font-size: 14px;
+        background-color: transparent;
+      }
+
+      .card-body {
+        width: 100%;
+        border-bottom: 1px solid rgb(172, 160, 160);
+      }
+
+      .fp {
+        width: 100%;
+      }
+
+      .cardb {
+        padding: 0;
+      }
+
+      .card-body p {
+        font-size: 9px;
+      }
+
+      input {
+        height: 30px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        font-size: 13px;
+        border: 1px solid rgb(172, 160, 160);
+        ;
+      }
+
+      #togglePassword {
+        position: absolute;
+        margin-top: 54px;
+        margin-left: 165px;
+        font-size: 8px;
+        color: purple;
+        font-weight: bolder;
         cursor: pointer;
       }
 
-      .whatsap {
-        width: 80px;
-        height: 80px;
-        position: fixed;
-        margin-left: 94%;
-        margin-top: 300px;
+      .body {
+        border: 0;
+      }
+
+      .body span {
+        font-size: 7px;
+
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="container-fluid bb d-flex"
-    style="width: 100%; height: 100%; justify-content: center; align-items: center; ; background-repeat: no-repeat; background-size: cover;">
+  <div class="container-fluid bb d-flex">
 
-    <div class=" card container-fluid bg-light rounded-5 " style="width: 600px; height: 650px; margin-top: 20px;  ">
-      <div class="card-top " style="margin-top: 35px;">
-        <a href="login.html" style="margin-left: 500px; border: 0px; background-color: transparent;">
+    <div class=" card container-fluid bg-light rounded-5 ">
+      <div class="card-top ">
+        <a href="login.html">
           <h8 class=" fw-semibold " style=" color: purple;">BACK</h8>
         </a>
 
       </div>
-      <div class="card-body container-fluid d-flex flex-column align-items-center justify-content-center"
-        style="width: 100%;">
-        <div class="container-fluid" style="width: 80%; border-bottom: 1px solid rgb(172, 160, 160);">
-          <h2>Apply to join the internship</h2>
-          <p>Enter your email to begin your application</p>
-          <form action="index.html" onsubmit="return valid()" class="d-flex flex-column">
+      <div
+        class="card-body cardb container-fluid d-flex flex-column align-items-center justify-content-center border-0">
+        <div class="container-fluid fp">
+          <h2>Sign Up</h2>
+          <p>Enter your email to get your password</p>
+          <form action="checkout.html" onsubmit="return valid()" class="d-flex flex-column">
             <input type="email" name="email" id="email" placeholder="Email address" required="Email is required"
               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" onkeyup="check()">
             <input type="email" name="reemail" id="reemail" placeholder="Re-enter email address"
               required="Email is required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" onkeyup="check()">
 
             <input class="fw-bolder" type="submit" value="Apply now" id="applynow">
-            <div class="container-fluid d-flex align-items-center justify-content-center"><span
-                style="font-size: 11px; text-align: center;">By
-                applying for the
-                internship. I agree to <span style="color: purple;">Side Hustle's Terms and Conditions</span> and <span
+            <div class="container-fluid d-flex align-items-center justify-content-center body"><span>By
+                signing up for the
+                LW VR. I agree to <span style="color: purple;">LW's Terms and Conditions</span> and <span
                   style="color: purple;">Privacy Policy</span></span></div>
 
           </form>
